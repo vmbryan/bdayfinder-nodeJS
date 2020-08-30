@@ -4,9 +4,9 @@ const passport = require('passport')
 const signup = async(req, res, next) => {
     let username = req.body.username
     let password = req.body.password
-    // let birthdate = req.body.birthdate
+    let birthday = req.body.birthday
 
-    const user = new User({username : username})
+    const user = new User({username : username, birthday:birthday})
     await user.setPassword(password)
     // await user.setBirthdate(birthdate)
     await user.save().then(result =>{
