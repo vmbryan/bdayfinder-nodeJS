@@ -8,7 +8,9 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const apiChatsRouter = require('./routes/api/v1/chats')
 
+
 const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true)
 mongoose.connect('mongodb://localhost:27017/bdayfinderapp', {
   useNewUrlParser: true, useUnifiedTopology: true
 });
