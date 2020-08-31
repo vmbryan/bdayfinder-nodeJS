@@ -24,6 +24,7 @@ const signup = async(req, res, next) => {
             username: result.username,
             dob : result.birthday
         }, config.get('jwt.secret'))
+        // ds
         res.json({
             'status' : 'success',
             "data" : {
