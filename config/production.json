@@ -2,5 +2,7 @@
     "Database" : {
         "conn" : "mongodb+srv://bryan-nodejs:xhnrUvpC4bH10SWW@cluster0.i207f.mongodb.net/bdayfinderapp?retryWrites=true&w=majority"
     },
-    "jwt" : "SecretForSigning"
+    "jwt" : {
+        "secret" : "SecretForSigning"
+    }
 }
