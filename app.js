@@ -1,3 +1,5 @@
+const config = require('config')
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -14,7 +16,7 @@ const passportStrategy = require('./passport/passport')
 const mongoose = require('mongoose');
 const passport = require('passport');
 mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost:27017/bdayfinderapp', {
+mongoose.connect(config.get('Database.conn'), {
   useNewUrlParser: true, useUnifiedTopology: true
 });
 

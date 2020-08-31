@@ -6,8 +6,8 @@ const create = (req, res, next) => {
 
     let chat = new Chat()
     chat.text = req.body.text
-    chat.sender = req.body.sender
-    chat.receiver = req.body.receiver
+    console.log(req.user)
+    chat.sender = req.user._id
     chat.save((err, doc) => {
 
         if(err){

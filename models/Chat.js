@@ -5,8 +5,7 @@ const chatSchema = new Schema({
         type :String,
         required : true
     },
-    sender: String,
-    receiver: String,
+    sender: String
 })
 
 const Chat = mongoose.model('Chat', chatSchema)
